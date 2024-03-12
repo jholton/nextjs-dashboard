@@ -4,6 +4,7 @@ import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 import { useDebouncedCallback } from 'use-debounce';
 import { useState } from "react";
+import Table from '@/app/ui/bitcoin/table';
 
 export default function ExtendedKey() {
   const searchParams = useSearchParams();
@@ -49,6 +50,7 @@ export default function ExtendedKey() {
           </p>
         }
       </div>
+      <Table keys={[]} />
     </fieldset>
   );
 }
